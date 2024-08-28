@@ -15,13 +15,17 @@
         </div>
     </div>
     <div class="container">
-        {% for post in posts %}
-            <div class="post">
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.content }}</p>
-                <small>Posted on: {{ post.date_posted.strftime('%Y-%m-%d') }}</small>
-            </div>
-        {% endfor %}
+        {% if posts %}
+            {% for post in posts %}
+                <div class="post">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.content }}</p>
+                    <small>Posted on: {{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No posts available.</p>
+        {% endif %}
     </div>
 </body>
 </html>
