@@ -26,8 +26,8 @@ h1 {
 }
 
 p {
-    font-size: 24px;
-    line-height: 1.10722;
+    font-size: 18px; // Reduced from 24px
+    line-height: 1.5; // Adjusted for better readability
     font-weight: 400;
     letter-spacing: .004em;
     color: #86868b;
@@ -49,6 +49,8 @@ p {
 
 .post p {
     color: #666;
+    font-size: 16px; // Added to make blog post text smaller
+    line-height: 1.6; // Adjusted for better readability
 }
 
 .post small {
