@@ -26,7 +26,7 @@ h1 {
 }
 
 p {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.10722;
     font-weight: 400;
     letter-spacing: .004em;
@@ -34,8 +34,6 @@ p {
 }
 
 .post {
-    background-color: #ffffff;
-    border: 1px solid #e1e1e1;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
@@ -45,6 +43,8 @@ p {
 .post h2 {
     color: #333;
     margin-top: 0;
+    font-size: 32px; /* Increased from 28px (p font size) */
+    line-height: 1.2;
 }
 
 .post p {
