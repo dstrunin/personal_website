@@ -118,3 +118,22 @@ button:hover {
 .post button:hover {
     background-color: #c82333;
 }
+
+.typing {
+    overflow: hidden;
+    border-right: .15em solid #000000;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 0.5s steps(20, end), blink-caret 1s step-end infinite;
+    width: 300px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 300px }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    30% { border-color: #ff0000; }
+}
