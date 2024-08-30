@@ -53,6 +53,18 @@ def delete_post(id):
     flash('Post has been deleted!', 'success')
     return redirect(url_for('admin'))
 
+@app.route('/edit_post/<int:id>', methods=['GET', 'POST'])
+def edit_post(id):
+    post = BlogPost.query.get_or_404(id)
+    if request.method == 'POST':
+        post.title = request.form['title']
+        post.content = request.form['content']
+        post.date_posted = datetime.now()
+        db.session.commit()
+        flash('Your post has been updated!', 'success')
+        return redirect(url_for('admin'))
+    return render_template('edit_post.html', post=post)
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
